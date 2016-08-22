@@ -1,0 +1,1174 @@
+Last login: Sun Aug 21 09:27:01 on console
+SUPRIYAs-MacBook-Pro:~ suppi$ cd desktop
+SUPRIYAs-MacBook-Pro:desktop suppi$ cd SWE 525
+-bash: cd: SWE: No such file or directory
+SUPRIYAs-MacBook-Pro:desktop suppi$ SWE525
+-bash: SWE525: command not found
+SUPRIYAs-MacBook-Pro:desktop suppi$ cd SWE525
+SUPRIYAs-MacBook-Pro:SWE525 suppi$ git clone https://github.com/Supriyankumar/midtermgit.git
+Cloning into 'midtermgit'...
+remote: Counting objects: 3, done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+SUPRIYAs-MacBook-Pro:SWE525 suppi$ cd midtermgit
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ ls
+README.md
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ ls
+README.md
+SWE 525 GIT Version Control Mid Term Exam 08.docx
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ echo "#This is a new test file" > file1
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ ls
+README.md
+SWE 525 GIT Version Control Mid Term Exam 08.docx
+file1
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git add file1
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git commit -m 'add new file1'
+[master 84c148b] add new file1
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file1
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git status
+# On branch master
+# Your branch is ahead of 'origin/master' by 1 commit.
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	SWE 525 GIT Version Control Mid Term Exam 08.docx
+nothing added to commit but untracked files present (use "git add" to track)
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git add file1
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git commit -m 'new line added'
+[master cffb938] new line added
+ 1 file changed, 1 insertion(+)
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git status
+# On branch master
+# Your branch is ahead of 'origin/master' by 2 commits.
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	SWE 525 GIT Version Control Mid Term Exam 08.docx
+nothing added to commit but untracked files present (use "git add" to track)
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git diff file1
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git status
+# On branch master
+# Your branch is ahead of 'origin/master' by 2 commits.
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	SWE 525 GIT Version Control Mid Term Exam 08.docx
+nothing added to commit but untracked files present (use "git add" to track)
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git add SWE 525 GIT Version Control Mid Term Exam 08.docx
+fatal: pathspec 'SWE' did not match any files
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git add SWE525GITVersionControlMidTerm Exam08.docx
+fatal: pathspec 'SWE525GITVersionControlMidTerm' did not match any files
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ echo '# This is a second file' file2
+# This is a second file file2
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git add file2
+fatal: pathspec 'file2' did not match any files
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ touch file2.txt
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ ls
+README.md
+SWE 525 GIT Version Control Mid Term Exam 08.docx
+file1
+file2.txt
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git add file2.txt
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git status
+# On branch master
+# Your branch is ahead of 'origin/master' by 2 commits.
+#
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	new file:   file2.txt
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	SWE 525 GIT Version Control Mid Term Exam 08.docx
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git add SWE_525_GIT_Version_Control_Mid_Term_Exam_08.docx
+fatal: pathspec 'SWE_525_GIT_Version_Control_Mid_Term_Exam_08.docx' did not match any files
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git add Answersgitmidterm.docx
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ ls
+Answersgitmidterm.docx
+README.md
+SWE 525 GIT Version Control Mid Term Exam 08.docx
+file1
+file2.txt
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git add file2
+fatal: pathspec 'file2' did not match any files
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git add file2.txt
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git diff file2.txt
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git add file2.txt
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git diff file2.txt
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git status
+# On branch master
+# Your branch is ahead of 'origin/master' by 2 commits.
+#
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	new file:   Answersgitmidterm.docx
+#	new file:   file2.txt
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	SWE 525 GIT Version Control Mid Term Exam 08.docx
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git add file2.txt
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git diff file2.txt
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git status
+# On branch master
+# Your branch is ahead of 'origin/master' by 2 commits.
+#
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	new file:   Answersgitmidterm.docx
+#	new file:   file2.txt
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	SWE 525 GIT Version Control Mid Term Exam 08.docx
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git commit -m 'new changes made'
+[master b902a62] new changes made
+ 2 files changed, 8 insertions(+)
+ create mode 100644 Answersgitmidterm.docx
+ create mode 100644 file2.txt
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git diff file2.txt
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git status
+# On branch master
+# Your branch is ahead of 'origin/master' by 3 commits.
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	SWE 525 GIT Version Control Mid Term Exam 08.docx
+nothing added to commit but untracked files present (use "git add" to track)
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git add Answersgitmidterm.docx
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git commit -m 'new answers'
+[master 732dd58] new answers
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git diff Answersgitmidterm.docx
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git status
+# On branch master
+# Your branch is ahead of 'origin/master' by 4 commits.
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	SWE 525 GIT Version Control Mid Term Exam 08.docx
+nothing added to commit but untracked files present (use "git add" to track)
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git push origin
+Username for 'https://github.com': 89706.kumar@students.itu.edu
+Password for 'https://89706.kumar@students.itu.edu@github.com': 
+Counting objects: 14, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (12/12), done.
+Writing objects: 100% (13/13), 114.78 KiB, done.
+Total 13 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), done.
+To https://github.com/Supriyankumar/midtermgit.git
+   fbe3e82..732dd58  master -> master
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ ls
+Answersgitmidterm.docx
+README.md
+SWE 525 GIT Version Control Mid Term Exam 08.docx
+file1
+file2.txt
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ ls -a
+.
+..
+.git
+Answersgitmidterm.docx
+README.md
+SWE 525 GIT Version Control Mid Term Exam 08.docx
+file1
+file2.txt
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ touch .gitignore
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ ls
+Answersgitmidterm.docx
+README.md
+SWE 525 GIT Version Control Mid Term Exam 08.docx
+file1
+file2.txt
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ ls -a
+.
+..
+.git
+.gitignore
+Answersgitmidterm.docx
+README.md
+SWE 525 GIT Version Control Mid Term Exam 08.docx
+file1
+file2.txt
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git rm --cached .gitignore
+fatal: pathspec '.gitignore' did not match any files
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git add .gitignore
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git rm --cached .gitignore
+rm '.gitignore'
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git status
+# On branch master
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	modified:   Answersgitmidterm.docx
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	.gitignore
+#	SWE 525 GIT Version Control Mid Term Exam 08.docx
+no changes added to commit (use "git add" and/or "git commit -a")
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git add Answersgitmidterm.docx
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git commit -m 'added more answers for remove and ignore'
+[master 22f4ef4] added more answers for remove and ignore
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git diff Answersgitmidterm
+fatal: ambiguous argument 'Answersgitmidterm': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git diff Answersgitmidterm.docx
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git push origin
+Username for 'https://github.com': 89706.kumar@students.itu.edu
+Password for 'https://89706.kumar@students.itu.edu@github.com': 
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 12.28 KiB, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Supriyankumar/midtermgit.git
+   732dd58..22f4ef4  master -> master
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git add file2.txt
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ echo '# test line' >> file2.txt
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git status
+# On branch master
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	modified:   Answersgitmidterm.docx
+#	modified:   file2.txt
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	.gitignore
+#	SWE 525 GIT Version Control Mid Term Exam 08.docx
+no changes added to commit (use "git add" and/or "git commit -a")
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git diff
+diff --git a/Answersgitmidterm.docx b/Answersgitmidterm.docx
+index 549aa61..450de80 100644
+Binary files a/Answersgitmidterm.docx and b/Answersgitmidterm.docx differ
+diff --git a/file2.txt b/file2.txt
+index 0f3bb87..7112a74 100644
+--- a/file2.txt
++++ b/file2.txt
+@@ -5,4 +5,4 @@ Here are the new added lines into this file
+ 
+ This is the third change in the file
+ 
+-This is the fifth change in the file.
+\ No newline at end of file
++This is the fifth change in the file.# test line
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git diff --cached
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git commit -m 'added new line'
+# On branch master
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	modified:   Answersgitmidterm.docx
+#	modified:   file2.txt
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	.gitignore
+#	SWE 525 GIT Version Control Mid Term Exam 08.docx
+no changes added to commit (use "git add" and/or "git commit -a")
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git status
+# On branch master
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	modified:   Answersgitmidterm.docx
+#	modified:   file2.txt
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	.gitignore
+#	SWE 525 GIT Version Control Mid Term Exam 08.docx
+no changes added to commit (use "git add" and/or "git commit -a")
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git log
+commit 22f4ef476387a6692c53f87cbb0748b882a8b938
+Author: Supriya Kumar <supriya.nkumar@gmail.com>
+Date:   Sun Aug 21 13:20:43 2016 -0700
+
+    added more answers for remove and ignore
+
+commit 732dd582d51faf200939265f9c0e4015ce1980ee
+Author: Supriya Kumar <supriya.nkumar@gmail.com>
+Date:   Sun Aug 21 13:02:39 2016 -0700
+
+    new answers
+
+commit b902a626648a3134596063e9a4f77000b07b101b
+Author: Supriya Kumar <supriya.nkumar@gmail.com>
+Date:   Sun Aug 21 13:00:36 2016 -0700
+
+    new changes made
+
+commit cffb938d25e9ff23f8244b948e00613d934a3590
+Author: Supriya Kumar <supriya.nkumar@gmail.com>
+Date:   Sun Aug 21 12:44:51 2016 -0700
+
+    new line added
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git log -Snew
+commit b902a626648a3134596063e9a4f77000b07b101b
+Author: Supriya Kumar <supriya.nkumar@gmail.com>
+Date:   Sun Aug 21 13:00:36 2016 -0700
+
+    new changes made
+
+commit 84c148b817bcddfff0414ee59989f400f7b36008
+Author: Supriya Kumar <supriya.nkumar@gmail.com>
+Date:   Sun Aug 21 12:42:05 2016 -0700
+
+    add new file1
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git coomit --amend
+git: 'coomit' is not a git command. See 'git --help'.
+
+Did you mean this?
+	commit
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git commit --amend
+[master 447d626] added more answers for remove and ignore
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git add *
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git status
+# On branch master
+# Your branch and 'origin/master' have diverged,
+# and have 1 and 1 different commit each, respectively.
+#
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	modified:   Answersgitmidterm.docx
+#	new file:   SWE 525 GIT Version Control Mid Term Exam 08.docx
+#	modified:   file2.txt
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	.gitignore
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git reset HEAD file2.txt
+Unstaged changes after reset:
+M	file2.txt
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git push origin
+Username for 'https://github.com': 89706.kumar@students.itu.edu
+Password for 'https://89706.kumar@students.itu.edu@github.com': 
+To https://github.com/Supriyankumar/midtermgit.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/Supriyankumar/midtermgit.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Merge the remote changes (e.g. 'git pull')
+hint: before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git status
+# On branch master
+# Your branch and 'origin/master' have diverged,
+# and have 1 and 1 different commit each, respectively.
+#
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	modified:   Answersgitmidterm.docx
+#	new file:   SWE 525 GIT Version Control Mid Term Exam 08.docx
+#
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	modified:   Answersgitmidterm.docx
+#	modified:   file2.txt
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	.gitignore
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git commit -m 'new files'
+[master dbbcf8e] new files
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 SWE 525 GIT Version Control Mid Term Exam 08.docx
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git status
+# On branch master
+# Your branch and 'origin/master' have diverged,
+# and have 2 and 1 different commit each, respectively.
+#
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	modified:   Answersgitmidterm.docx
+#	modified:   file2.txt
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	.gitignore
+no changes added to commit (use "git add" and/or "git commit -a")
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git push origin
+Username for 'https://github.com': 89706.kumar@students.itu.edu
+Password for 'https://89706.kumar@students.itu.edu@github.com': 
+To https://github.com/Supriyankumar/midtermgit.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/Supriyankumar/midtermgit.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Merge the remote changes (e.g. 'git pull')
+hint: before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git branch
+* master
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git push origin/master
+fatal: 'origin/master' does not appear to be a git repository
+fatal: The remote end hung up unexpectedly
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git push --help
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git push
+Username for 'https://github.com': 89706.kumar@students.itu.edu
+Password for 'https://89706.kumar@students.itu.edu@github.com': 
+To https://github.com/Supriyankumar/midtermgit.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/Supriyankumar/midtermgit.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Merge the remote changes (e.g. 'git pull')
+hint: before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git pull origin
+error: Your local changes to the following files would be overwritten by merge:
+	Answersgitmidterm.docx
+Please, commit your changes or stash them before you can merge.
+Aborting
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git commit -m 'all changes'
+# On branch master
+# Your branch and 'origin/master' have diverged,
+# and have 2 and 1 different commit each, respectively.
+#
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	modified:   Answersgitmidterm.docx
+#	modified:   file2.txt
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	.gitignore
+no changes added to commit (use "git add" and/or "git commit -a")
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git add .gitignore
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git commit .gitignore
+Aborting commit due to empty commit message.
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git commit -m 'all changes'
+[master f2e5a30] all changes
+ 0 files changed
+ create mode 100644 .gitignore
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git push origin
+Username for 'https://github.com': 89706.kumar@students.itu.edu
+Password for 'https://89706.kumar@students.itu.edu@github.com': 
+To https://github.com/Supriyankumar/midtermgit.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/Supriyankumar/midtermgit.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Merge the remote changes (e.g. 'git pull')
+hint: before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git status
+# On branch master
+# Your branch and 'origin/master' have diverged,
+# and have 3 and 1 different commit each, respectively.
+#
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	modified:   Answersgitmidterm.docx
+#	modified:   file2.txt
+#
+no changes added to commit (use "git add" and/or "git commit -a")
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git add Answersgitmidterm.docx
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git commit -m 'new changes'
+[master 2c6deda] new changes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git add file2.txt
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git commit -m 'added'
+[master a54132a] added
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git status
+# On branch master
+# Your branch and 'origin/master' have diverged,
+# and have 5 and 1 different commit each, respectively.
+#
+nothing to commit (working directory clean)
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git push
+Username for 'https://github.com': 89706.kumar@students.itu.edu
+Password for 'https://89706.kumar@students.itu.edu@github.com': 
+To https://github.com/Supriyankumar/midtermgit.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/Supriyankumar/midtermgit.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Merge the remote changes (e.g. 'git pull')
+hint: before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git pull origin
+warning: Cannot merge binary files: Answersgitmidterm.docx (HEAD vs. 22f4ef476387a6692c53f87cbb0748b882a8b938)
+
+Auto-merging Answersgitmidterm.docx
+CONFLICT (content): Merge conflict in Answersgitmidterm.docx
+Automatic merge failed; fix conflicts and then commit the result.
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git branch
+* master
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git branch feature1
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git branch feature2
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git branch
+  feature1
+  feature2
+* master
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git branch -d feature2
+Deleted branch feature2 (was a54132a).
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git checkout feature1
+Answersgitmidterm.docx: needs merge
+error: you need to resolve your current index first
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git branch
+  feature1
+* master
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git reset --hard
+HEAD is now at a54132a added
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git status
+# On branch master
+# Your branch and 'origin/master' have diverged,
+# and have 5 and 1 different commit each, respectively.
+#
+nothing to commit (working directory clean)
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git push
+Username for 'https://github.com': 89706.kumar@students.itu.edu
+Password for 'https://89706.kumar@students.itu.edu@github.com': 
+To https://github.com/Supriyankumar/midtermgit.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/Supriyankumar/midtermgit.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Merge the remote changes (e.g. 'git pull')
+hint: before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git branch
+  feature1
+* master
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git checkout feature1
+Switched to branch 'feature1'
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git branch
+* feature1
+  master
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git status
+# On branch feature1
+nothing to commit (working directory clean)
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git log
+commit a54132aa9cb94e6175117d29dc96b3e84df70c3b
+Author: Supriya Kumar <supriya.nkumar@gmail.com>
+Date:   Sun Aug 21 13:57:37 2016 -0700
+
+    added
+
+commit 2c6deda9ed27302e313097afdb126549d62cf765
+Author: Supriya Kumar <supriya.nkumar@gmail.com>
+Date:   Sun Aug 21 13:57:22 2016 -0700
+
+    new changes
+
+commit f2e5a308932b1a9d9d94fe6e800db55f8be13a2a
+Author: Supriya Kumar <supriya.nkumar@gmail.com>
+Date:   Sun Aug 21 13:54:50 2016 -0700
+
+    all changes
+
+commit dbbcf8e062917a2e287ed91288589e170b8bfc46
+Author: Supriya Kumar <supriya.nkumar@gmail.com>
+Date:   Sun Aug 21 13:50:31 2016 -0700
+
+    new files
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git pull 
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream feature1 origin/<branch>
+
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git checkout master
+Switched to branch 'master'
+Your branch and 'origin/master' have diverged,
+and have 5 and 1 different commit each, respectively.
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git pull origin
+warning: Cannot merge binary files: Answersgitmidterm.docx (HEAD vs. 22f4ef476387a6692c53f87cbb0748b882a8b938)
+
+Auto-merging Answersgitmidterm.docx
+CONFLICT (content): Merge conflict in Answersgitmidterm.docx
+Automatic merge failed; fix conflicts and then commit the result.
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git status -S
+error: unknown switch `S'
+usage: git status [options] [--] <filepattern>...
+
+    -v, --verbose         be verbose
+    -s, --short           show status concisely
+    -b, --branch          show branch information
+    --porcelain           machine-readable output
+    -z, --null            terminate entries with NUL
+    -u, --untracked-files[=<mode>]
+                          show untracked files, optional modes: all, normal, no. (Default: all)
+    --ignored             show ignored files
+    --ignore-submodules[=<when>]
+                          ignore changes to submodules, optional when: all, dirty, untracked. (Default: all)
+
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git status -s
+UU Answersgitmidterm.docx
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git add a.
+fatal: pathspec 'a.' did not match any files
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git add a .
+fatal: pathspec 'a' did not match any files
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git add -a
+error: unknown switch `a'
+usage: git add [options] [--] <filepattern>...
+
+    -n, --dry-run         dry run
+    -v, --verbose         be verbose
+
+    -i, --interactive     interactive picking
+    -p, --patch           select hunks interactively
+    -e, --edit            edit current diff and apply
+    -f, --force           allow adding otherwise ignored files
+    -u, --update          update tracked files
+    -N, --intent-to-add   record only the fact that the path will be added later
+    -A, --all             add changes from all tracked and untracked files
+    --refresh             don't add, only refresh the index
+    --ignore-errors       just skip files which cannot be added because of errors
+    --ignore-missing      check if - even missing - files are ignored in dry run
+
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git add.
+git: 'add.' is not a git command. See 'git --help'.
+
+Did you mean this?
+	add
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git add .
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git status
+# On branch master
+# Your branch and 'origin/master' have diverged,
+# and have 5 and 1 different commit each, respectively.
+#
+nothing to commit (working directory clean)
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ cd
+SUPRIYAs-MacBook-Pro:~ suppi$ cd desktop
+SUPRIYAs-MacBook-Pro:desktop suppi$ cd SWE525
+SUPRIYAs-MacBook-Pro:SWE525 suppi$ ls
+Assignment1-Git			midtermgit
+Treehouse			treehouse_android_utilities
+SUPRIYAs-MacBook-Pro:SWE525 suppi$ git clone https://github.com/Supriyankumar/midtermgit.git
+fatal: destination path 'midtermgit' already exists and is not an empty directory.
+SUPRIYAs-MacBook-Pro:SWE525 suppi$ cd Midterm
+-bash: cd: Midterm: No such file or directory
+SUPRIYAs-MacBook-Pro:SWE525 suppi$ mkdir Midterm
+SUPRIYAs-MacBook-Pro:SWE525 suppi$ cd Midterm
+SUPRIYAs-MacBook-Pro:Midterm suppi$ git clone https://github.com/Supriyankumar/midtermgit.git
+Cloning into 'midtermgit'...
+remote: Counting objects: 19, done.
+remote: Compressing objects: 100% (12/12), done.
+remote: Total 19 (delta 4), reused 16 (delta 4), pack-reused 0
+Unpacking objects: 100% (19/19), done.
+SUPRIYAs-MacBook-Pro:Midterm suppi$ git status
+# On branch master
+#
+# Initial commit
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	../Assignment1-Git/
+#	./
+#	../Treehouse/
+#	../midtermgit/
+#	../treehouse_android_utilities/
+nothing added to commit but untracked files present (use "git add" to track)
+SUPRIYAs-MacBook-Pro:Midterm suppi$ cd midtermgit
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ ls
+Answersgitmidterm.docx	file1
+README.md		file2.txt
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git add Answersgitmidterm.docx
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git commit -m 'new file'
+[master d6d98b8] new file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git status
+# On branch master
+# Your branch is ahead of 'origin/master' by 1 commit.
+#
+nothing to commit (working directory clean)
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git push origin
+Username for 'https://github.com': 89706.kumar@students.itu.edu
+Password for 'https://89706.kumar@students.itu.edu@github.com': 
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 33.51 KiB, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Supriyankumar/midtermgit.git
+   22f4ef4..d6d98b8  master -> master
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git add Answersgitmidterm.docx
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git commit -m 'more answers'
+[master 2f8565a] more answers
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git status
+# On branch master
+# Your branch is ahead of 'origin/master' by 1 commit.
+#
+nothing to commit (working directory clean)
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git push
+Username for 'https://github.com': 89706.kumar@students.itu.edu
+Password for 'https://89706.kumar@students.itu.edu@github.com': 
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 20.81 KiB, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Supriyankumar/midtermgit.git
+   d6d98b8..2f8565a  master -> master
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git commit -m "A"
+# On branch master
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	modified:   Answersgitmidterm.docx
+#
+no changes added to commit (use "git add" and/or "git commit -a")
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git commit -m "B"
+# On branch master
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	modified:   Answersgitmidterm.docx
+#
+no changes added to commit (use "git add" and/or "git commit -a")
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git branch stable
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git checkout -b experiment
+M	Answersgitmidterm.docx
+Switched to a new branch 'experiment'
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git commit -m "C"
+# On branch experiment
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	modified:   Answersgitmidterm.docx
+#
+no changes added to commit (use "git add" and/or "git commit -a")
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git checkout master
+M	Answersgitmidterm.docx
+Switched to branch 'master'
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git commit -m "D"
+# On branch master
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	modified:   Answersgitmidterm.docx
+#
+no changes added to commit (use "git add" and/or "git commit -a")
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git branch goodidea
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git checkout experiment
+M	Answersgitmidterm.docx
+Switched to branch 'experiment'
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git branch whereami
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git commit -m "E"
+# On branch experiment
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	modified:   Answersgitmidterm.docx
+#
+no changes added to commit (use "git add" and/or "git commit -a")
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git checkout goodidea
+M	Answersgitmidterm.docx
+Switched to branch 'goodidea'
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git checkout master
+M	Answersgitmidterm.docx
+Switched to branch 'master'
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git commit -m "F"
+# On branch master
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	modified:   Answersgitmidterm.docx
+#
+no changes added to commit (use "git add" and/or "git commit -a")
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git checkout whereami
+M	Answersgitmidterm.docx
+Switched to branch 'whereami'
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git commit -m "G"
+# On branch whereami
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	modified:   Answersgitmidterm.docx
+#
+no changes added to commit (use "git add" and/or "git commit -a")
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git checkout master
+M	Answersgitmidterm.docx
+Switched to branch 'master'
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git push
+Username for 'https://github.com': 89706.kumar@students.itu.edu
+Password for 'https://89706.kumar@students.itu.edu@github.com': 
+Everything up-to-date
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git push
+Username for 'https://github.com': 89706.kumar@students.itu.edu
+Password for 'https://89706.kumar@students.itu.edu@github.com': 
+Everything up-to-date
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git add Answersgitmidterm.docx
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git commit -m 'more answers'
+[master cd19e31] more answers
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ rewrite Answersgitmidterm.docx (87%)
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git status
+# On branch master
+# Your branch is ahead of 'origin/master' by 1 commit.
+#
+nothing to commit (working directory clean)
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git push
+Username for 'https://github.com': 89706.kumar@students.itu.edu
+Password for 'https://89706.kumar@students.itu.edu@github.com': 
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 118.34 KiB, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local objects.
+To https://github.com/Supriyankumar/midtermgit.git
+   2f8565a..cd19e31  master -> master
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git add Answersgitmidterm.docx
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git commit -m 'more answers'
+[master a462c3e] more answers
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git status
+# On branch master
+# Your branch is ahead of 'origin/master' by 1 commit.
+#
+nothing to commit (working directory clean)
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git push
+Username for 'https://github.com': 89706.kumar@students.itu.edu
+Password for 'https://89706.kumar@students.itu.edu@github.com': 
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 65.81 KiB, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Supriyankumar/midtermgit.git
+   cd19e31..a462c3e  master -> master
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git remote
+origin
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ mkdir exam
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ ls
+Answersgitmidterm.docx	exam			file2.txt
+README.md		file1
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ cd exam
+SUPRIYAs-MacBook-Pro:exam suppi$ git remote add pb https://github.com/Supriyankumar/midtermgit.git
+SUPRIYAs-MacBook-Pro:exam suppi$ git remote -v
+origin	https://github.com/Supriyankumar/midtermgit.git (fetch)
+origin	https://github.com/Supriyankumar/midtermgit.git (push)
+pb	https://github.com/Supriyankumar/midtermgit.git (fetch)
+pb	https://github.com/Supriyankumar/midtermgit.git (push)
+SUPRIYAs-MacBook-Pro:exam suppi$ echo "# working with remote repository" >> remote1.txt
+SUPRIYAs-MacBook-Pro:exam suppi$ git add remote1.txt
+SUPRIYAs-MacBook-Pro:exam suppi$ git commit -m "addition of new file"
+[master 0ad43c2] addition of new file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 exam/remote1.txt
+SUPRIYAs-MacBook-Pro:exam suppi$ git rm --cached
+usage: git rm [options] [--] <file>...
+
+    -n, --dry-run         dry run
+    -q, --quiet           do not list removed files
+    --cached              only remove from the index
+    -f, --force           override the up-to-date check
+    -r                    allow recursive removal
+    --ignore-unmatch      exit with a zero status even if nothing matched
+
+SUPRIYAs-MacBook-Pro:exam suppi$ git rm --cached remote1.txt
+rm 'exam/remote1.txt'
+SUPRIYAs-MacBook-Pro:exam suppi$ ls
+remote1.txt
+SUPRIYAs-MacBook-Pro:exam suppi$ echo "# second line to file" >> remote1.txt
+SUPRIYAs-MacBook-Pro:exam suppi$ git add remote1.txt
+SUPRIYAs-MacBook-Pro:exam suppi$ git diff remote1.txt
+SUPRIYAs-MacBook-Pro:exam suppi$ git commit -m "added new line"
+[master f77797a] added new line
+ 1 file changed, 1 insertion(+)
+SUPRIYAs-MacBook-Pro:exam suppi$ git diff
+diff --git a/Answersgitmidterm.docx b/Answersgitmidterm.docx
+index cf9ad55..edeb3d6 100644
+Binary files a/Answersgitmidterm.docx and b/Answersgitmidterm.docx differ
+SUPRIYAs-MacBook-Pro:exam suppi$ git diff remote1.txt
+SUPRIYAs-MacBook-Pro:exam suppi$ git status
+# On branch master
+# Your branch is ahead of 'origin/master' by 2 commits.
+#
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	modified:   ../Answersgitmidterm.docx
+#
+no changes added to commit (use "git add" and/or "git commit -a")
+SUPRIYAs-MacBook-Pro:exam suppi$ git push
+Username for 'https://github.com': 89706.kumar@students.itu.edu
+Password for 'https://89706.kumar@students.itu.edu@github.com': 
+Counting objects: 9, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (8/8), 703 bytes, done.
+Total 8 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 1 local objects.
+To https://github.com/Supriyankumar/midtermgit.git
+   a462c3e..f77797a  master -> master
+SUPRIYAs-MacBook-Pro:exam suppi$ git fetch origin
+SUPRIYAs-MacBook-Pro:exam suppi$ git merge origin
+Already up-to-date.
+SUPRIYAs-MacBook-Pro:exam suppi$ git pull
+Already up-to-date.
+SUPRIYAs-MacBook-Pro:exam suppi$ git pull
+remote: Counting objects: 4, done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 4 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (4/4), done.
+From https://github.com/Supriyankumar/midtermgit
+   f77797a..9d7ed40  master     -> origin/master
+Updating f77797a..9d7ed40
+Fast-forward
+ exam/remote1.txt |    1 +
+ 1 file changed, 1 insertion(+)
+SUPRIYAs-MacBook-Pro:exam suppi$ git fetch origin/master
+fatal: 'origin/master' does not appear to be a git repository
+fatal: The remote end hung up unexpectedly
+SUPRIYAs-MacBook-Pro:exam suppi$ git fetch origin
+remote: Counting objects: 4, done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 4 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (4/4), done.
+From https://github.com/Supriyankumar/midtermgit
+   9d7ed40..82c7904  master     -> origin/master
+SUPRIYAs-MacBook-Pro:exam suppi$ git merge origin
+Updating 9d7ed40..82c7904
+Fast-forward
+ exam/remote1.txt |    1 +
+ 1 file changed, 1 insertion(+)
+SUPRIYAs-MacBook-Pro:exam suppi$ git pull
+remote: Counting objects: 4, done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 4 (delta 2), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (4/4), done.
+From https://github.com/Supriyankumar/midtermgit
+   82c7904..be2c141  master     -> origin/master
+Updating 82c7904..be2c141
+Fast-forward
+ exam/remote1.txt |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+SUPRIYAs-MacBook-Pro:exam suppi$ git status
+# On branch master
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	modified:   ../Answersgitmidterm.docx
+#
+no changes added to commit (use "git add" and/or "git commit -a")
+SUPRIYAs-MacBook-Pro:exam suppi$ echo "# for stashing" >> remote1.txt
+SUPRIYAs-MacBook-Pro:exam suppi$ git add remote1.txt
+SUPRIYAs-MacBook-Pro:exam suppi$ git status
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	modified:   remote1.txt
+#
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	modified:   ../Answersgitmidterm.docx
+#
+SUPRIYAs-MacBook-Pro:exam suppi$ git stash
+Saved working directory and index state WIP on master: be2c141 repositry name change
+HEAD is now at be2c141 repositry name change
+SUPRIYAs-MacBook-Pro:exam suppi$ git stash list
+stash@{0}: WIP on master: be2c141 repositry name change
+SUPRIYAs-MacBook-Pro:exam suppi$ git pull
+Already up-to-date.
+SUPRIYAs-MacBook-Pro:exam suppi$ git add remote1.txt
+SUPRIYAs-MacBook-Pro:exam suppi$ git stash apply
+# On branch master
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	modified:   ../Answersgitmidterm.docx
+#	modified:   remote1.txt
+#
+no changes added to commit (use "git add" and/or "git commit -a")
+SUPRIYAs-MacBook-Pro:exam suppi$ git branch
+  experiment
+  goodidea
+* master
+  stable
+  whereami
+SUPRIYAs-MacBook-Pro:exam suppi$ git branch feature
+SUPRIYAs-MacBook-Pro:exam suppi$ git branch
+  experiment
+  feature
+  goodidea
+* master
+  stable
+  whereami
+SUPRIYAs-MacBook-Pro:exam suppi$ git checkout feature
+M	Answersgitmidterm.docx
+M	exam/remote1.txt
+Switched to branch 'feature'
+SUPRIYAs-MacBook-Pro:exam suppi$ ls
+remote1.txt
+SUPRIYAs-MacBook-Pro:exam suppi$ git checkout feature
+M	Answersgitmidterm.docx
+M	exam/remote1.txt
+Already on 'feature'
+SUPRIYAs-MacBook-Pro:exam suppi$ git rebase master
+Cannot rebase: You have unstaged changes.
+Please commit or stash them.
+SUPRIYAs-MacBook-Pro:exam suppi$ git commit -m "A"
+# On branch feature
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	modified:   ../Answersgitmidterm.docx
+#	modified:   remote1.txt
+#
+no changes added to commit (use "git add" and/or "git commit -a")
+SUPRIYAs-MacBook-Pro:exam suppi$ git rebase master
+Cannot rebase: You have unstaged changes.
+Please commit or stash them.
+SUPRIYAs-MacBook-Pro:exam suppi$ git checkout feature
+M	Answersgitmidterm.docx
+M	exam/remote1.txt
+Already on 'feature'
+SUPRIYAs-MacBook-Pro:exam suppi$ touch file3.txt
+SUPRIYAs-MacBook-Pro:exam suppi$ git branch
+  experiment
+* feature
+  goodidea
+  master
+  stable
+  whereami
+SUPRIYAs-MacBook-Pro:exam suppi$ git add file3.txt
+SUPRIYAs-MacBook-Pro:exam suppi$ git commit -m 'file3'
+[feature 8097bea] file3
+ 0 files changed
+ create mode 100644 exam/file3.txt
+SUPRIYAs-MacBook-Pro:exam suppi$ git rebase master
+Cannot rebase: You have unstaged changes.
+Please commit or stash them.
+SUPRIYAs-MacBook-Pro:exam suppi$ git stash
+Saved working directory and index state WIP on feature: 8097bea file3
+HEAD is now at 8097bea file3
+SUPRIYAs-MacBook-Pro:exam suppi$ git rebase master
+Current branch feature is up to date.
+SUPRIYAs-MacBook-Pro:exam suppi$ git push
+Username for 'https://github.com': 89706.kumar@students.itu.edu
+Password for 'https://89706.kumar@students.itu.edu@github.com': 
+Everything up-to-date
+SUPRIYAs-MacBook-Pro:exam suppi$ git add Answersgitmidterm.docx
+fatal: pathspec 'exam/Answersgitmidterm.docx' did not match any files
+SUPRIYAs-MacBook-Pro:exam suppi$ git rebase master
+Current branch feature is up to date.
+SUPRIYAs-MacBook-Pro:exam suppi$ git branch
+  experiment
+* feature
+  goodidea
+  master
+  stable
+  whereami
+SUPRIYAs-MacBook-Pro:exam suppi$ git checkout master
+Switched to branch 'master'
+SUPRIYAs-MacBook-Pro:exam suppi$ git branch
+  experiment
+  feature
+  goodidea
+* master
+  stable
+  whereami
+SUPRIYAs-MacBook-Pro:exam suppi$ git merge feature
+Updating be2c141..8097bea
+Fast-forward
+ 0 files changed
+ create mode 100644 exam/file3.txt
+SUPRIYAs-MacBook-Pro:exam suppi$ git branch -d feature
+Deleted branch feature (was 8097bea).
+SUPRIYAs-MacBook-Pro:exam suppi$ git push
+Username for 'https://github.com': 89706.kumar@students.itu.edu
+Password for 'https://89706.kumar@students.itu.edu@github.com': 
+Counting objects: 6, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 338 bytes, done.
+Total 4 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local objects.
+To https://github.com/Supriyankumar/midtermgit.git
+   be2c141..8097bea  master -> master
+SUPRIYAs-MacBook-Pro:exam suppi$ cd
+SUPRIYAs-MacBook-Pro:~ suppi$ cd desktop
+SUPRIYAs-MacBook-Pro:desktop suppi$ cd SWE525
+SUPRIYAs-MacBook-Pro:SWE525 suppi$ ls
+Assignment1-Git			midtermgit
+Midterm				midtermsolutions.docx
+Treehouse			treehouse_android_utilities
+SUPRIYAs-MacBook-Pro:SWE525 suppi$ cd Midterm
+SUPRIYAs-MacBook-Pro:Midterm suppi$ ls
+midtermgit
+SUPRIYAs-MacBook-Pro:Midterm suppi$ cd midtermgit
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ ls
+Answersgitmidterm.docx	exam			file2.txt
+README.md		file1			midtermsolutions.docx
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git add midetermsolutions.docx
+fatal: pathspec 'midetermsolutions.docx' did not match any files
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git add midtermsolutions.docx
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git commit -m "answers file"
+[master bba4b9f] answers file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 midtermsolutions.docx
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ git push
+Username for 'https://github.com': 89706.kumar@students.itu.edu
+Password for 'https://89706.kumar@students.itu.edu@github.com': 
+Counting objects: 4, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 133.00 KiB, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local objects.
+To https://github.com/Supriyankumar/midtermgit.git
+   8097bea..bba4b9f  master -> master
+SUPRIYAs-MacBook-Pro:midtermgit suppi$ 
